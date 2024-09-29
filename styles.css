@@ -68,7 +68,7 @@ header {
 }
 
 /* Sterneffekt */
-#stars {
+#stars, #shooting-stars {
   position: fixed;
   top: 0;
   left: 0;
@@ -76,9 +76,10 @@ header {
   height: 100%;
   pointer-events: none;
   background: transparent;
-  display: none;
+  display: none; /* Anfangs versteckt */
 }
 
+/* Sternschnuppen */
 .shooting-star {
   position: absolute;
   width: 2px;
@@ -95,5 +96,27 @@ header {
   to {
     transform: translate(-200px, 200px);
     opacity: 0;
+  }
+}
+
+/* Funkelnde Sterne */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
