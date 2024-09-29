@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hochzeit von Anna & Tim</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Beispiel für eingebettete Hintergrundmusik */
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik abspielen -->
+  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mp3">
+    Dein Browser unterstützt keine Hintergrundmusik.
+  </audio>
+
+  <header>
+    <h1>Herzlich Willkommen zur Hochzeit von Anna & Tim!</h1>
+  </header>
+
+  <section class="content">
+    <p>Wir freuen uns, dass du hier bist, um diesen besonderen Tag mit uns zu feiern.</p>
+    <p>Hier findest du alle Infos zu unserer Hochzeit.</p>
+
+    <!-- Download-Link -->
+    <a href="datei.pdf" download="Einladung.pdf" class="download-link">Download Einladung</a>
+
+    <!-- Visual-Effekte-Toggle -->
+    <button onclick="toggleEffect('stars')">Funkelnde Sterne einschalten</button>
+    <button onclick="toggleEffect('shooting-stars')">Sternschnuppen einschalten</button>
+
+  </section>
+
+  <!-- Hintergrundbilder -->
+  <div class="background-images">
+    <img src="bild1.jpg" class="bg-image image1">
+    <img src="bild2.jpg" class="bg-image image2">
+    <img src="bild3.jpg" class="bg-image image3">
+  </div>
+
+  <!-- Effekt-Container -->
+  <div id="stars"></div>
+  <div id="shooting-stars"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
