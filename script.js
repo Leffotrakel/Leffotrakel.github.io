@@ -11,4 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentNode.querySelector('a').click();
         });
     });
+
+        // Set interval to repeat effect every 5 seconds (5000 milliseconds)
+    setInterval(function() {
+        // Perform a task every 5 seconds
+        document.querySelectorAll('.play-button').forEach(function(button) {
+            // Trigger a simulated click on each button
+            button.click();
+        });
+    }, 5000); // 5000 ms = 5 seconds
 });
