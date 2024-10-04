@@ -89,6 +89,8 @@ img {
 	display: flex;
     flex-direction: column !important;
     overflow-y: auto; /* Ermöglicht Scrollen nur für den Textbereich */
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 #MainText {
