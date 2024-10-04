@@ -24,11 +24,10 @@ p, body {
 
 body {
     background: #000a2e no-repeat center center fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	overflow-y: hidden;
-	overflow-x: hidden;
+    display: no-repeat center center fixed;;
+	position: relative;
+    overflow: visible;
+	overflow: visible;
 }
 
 /* Scrollbarer Textbereich nimmt die volle Höhe des Fensters ein */
@@ -49,6 +48,7 @@ body {
   color: #231675;
   text-decoration: none;
   border-radius: 150px;
+  z-index: 9;
 }
 
 img {
@@ -75,10 +75,13 @@ img {
 
 #mainDiv {
     color: #ffffffef;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    top: initial;
+    left: initial;
+	height: 150vh;
+	transform: none;
+	position: static;
+    !transform: translate(-50%, -50%);
+    !position: absolute;
     z-index: 8;
     align-items: center;
     justify-content: center;
@@ -90,12 +93,13 @@ img {
 #MainText {
     color: #ffffffef;
     text-align: center;
-	vertical-align: bottom;
-	z-index: 9;
+	top: 10%;
+	!vertical-align: top;
+	z-index: 11;
 }
 
 h1 {
-    font-size: 2.25rem;
+    font-size: 3.5rem;
     font-weight: 500;
     line-height: 1.2;
     margin-top: 0;
@@ -129,13 +133,14 @@ h1 {
     height: 100%;
     transform: rotateZ(45deg);
 	overflow: hidden;
-	z-index: 10;
+	z-index: 999;
 }
 
 .shooting_star {
-    position: fixed;
-    left: 50%;
-    top: 50%;
+	background: red;
+    position: fixed;  /* Bleibt im Viewport */
+    left: 10%;        /* Teste eine andere Position */
+    top: 10%;
     width: 100px;
     height: 1px;
     background: linear-gradient(
@@ -146,7 +151,7 @@ h1 {
     border-radius: 999px;
     filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
     animation: tail 3s ease-in-out, shooting 3s ease-in-out;
-	animation-iteration-count: infinite;    
+    animation-iteration-count: infinite;
 }
 
 @keyframes tail {
@@ -200,5 +205,35 @@ h1 {
     .clouds {
         display: block;
         width: 100%; /* Stelle sicher, dass die Wolken auch mobil gut aussehen */
+    }
+}
+
+
+/* Schimmernder Mondschein Animation */
+.moonshine {
+    position: fixed;
+    left: -150px;
+    top: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 10%, transparent 80%);
+    border-radius: 50%;
+    filter: blur(30px);
+    animation: moonshine 10s infinite ease-in-out;
+    z-index: 99;
+}
+
+@keyframes moonshine {
+    0% {
+        left: -150px;
+        opacity: 0;
+    }
+    50% {
+        left: 50%;
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
     }
 }
