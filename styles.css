@@ -78,6 +78,7 @@ img {
     top: initial;
     left: initial;
 	height: 150vh;
+	width: 80%;
 	transform: none;
 	position: static;
     !transform: translate(-50%, -50%);
